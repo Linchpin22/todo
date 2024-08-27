@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.theme-bg {
+  @apply bg-zinc-50 dark:bg-zinc-950 text-zinc-950 dark:text-zinc-50 theme-shift
+}
+
+.theme-bg-i {
+  @apply dark:bg-zinc-50 bg-zinc-950 dark:text-zinc-950 text-zinc-50 theme-shift  shadow-inner shadow-zinc-500/30
+}
+
+.theme-bg-gray {
+  @apply bg-zinc-100 dark:bg-zinc-800 theme-shift shadow-inner 
+}
+
+.theme-shift {
+  @apply transition-colors duration-200 !important
+}
+
+.theme-anim {
+  @apply animate-spin;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0, 0, 0.3, 1);
+  animation-duration: 600ms;
+}
